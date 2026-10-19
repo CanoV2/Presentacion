@@ -33,13 +33,14 @@ body {
 
 .hero {
   min-height: 545px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 49% 51%;
   border-bottom: 1px solid var(--border);
   background: radial-gradient(circle at 22% 25%, #222326, #0d0e10 68%);
 }
 
 .hero-content {
+  align-self: center;
   padding: 50px 30px 50px clamp(30px, 6vw, 100px);
 }
 
@@ -83,4 +84,9 @@ body {
   font-size: 18px;
   line-height: 1.65;
   max-width: 610px;
+}
+
+.hero-visual {
+  min-height: 500px;
+  background: linear-gradient(90deg, #111214, transparent 16%), url('img/escritorio.png') center / cover;
 }
