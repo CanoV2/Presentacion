@@ -1,0 +1,86 @@
+:root {
+  --background: #0b0c0e;
+  --text: #f5f5f6;
+  --muted: #a7a7ab;
+  --red: #ef243c;
+  --border: #292a2d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #303033;
+  background: #101113;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.hero {
+  min-height: 545px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at 22% 25%, #222326, #0d0e10 68%);
+}
+
+.hero-content {
+  padding: 50px 30px 50px clamp(30px, 6vw, 100px);
+}
+
+.eyebrow {
+  color: var(--muted);
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 29px;
+  height: 3px;
+  margin-right: 20px;
+  background: var(--red);
+  vertical-align: middle;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 4.2vw, 70px);
+  line-height: 1.07;
+  margin: 20px 0 16px;
+  letter-spacing: -2px;
+}
+
+.hero h2 {
+  color: #b6b6ba;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: clamp(15px, 1.45vw, 22px);
+  letter-spacing: 4px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 23px;
+}
+
+.hero h2 span { color: var(--red); }
+
+.hero-description {
+  color: #c4c4c7;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 610px;
+}
